@@ -102,6 +102,18 @@ pip install -r requirements.txt
 -Werkzeug==1.0.1
 -wrapt==1.12.1
 
+##People counting code
+#Running the program
+"python peoplecounter.py -vid Input/1.mp4 -roi manually"
+This will take the video 2.mp4 from Input folder and the distinct peoples' images will be stored in the Output_Images folder automatically. The output video, i.e. the video with the detection and counting taking place is saved in Output_Video. You'll have to create the Region of Interest (RoI) manually (by default). The RoI is a thin green rectangle drawn in the first frame which disappears after it is created, and the video is begun retaining only the RoI. However, to minimize repeated efforts for drawing the RoI, you can create it once and test to see if the results are good (preferred to draw a tall RoI which will encompass the entire length of a person; this ensures that different parts of the person recognized do not output as different people). If you have a well created and tested RoI, the program will ask you whether you want to save the RoI for future testing. To use the pre-tested RoIs, just use the argument "pre-tested" instead of "manually" in the command line. Example:
+
+"python peoplecounter.py -vid Input/2.mp4 -roi pre-tested"
+#Input Examples
+The Input folder has currently 2 video examples, taken from the internet. These videos are very short and only for testing. These videos - 1.mp4 and 2.mp4 have pre-tested RoI text files already created, so you can run the command line with RoI creation argument as "pre-tested", or "manually" if you prefer.
+
+There have been some parameters used throughout the program, such as HOG Descriptor parameters, NMS parameters, Feature Matching and SIFT parameters, which have their values as a result of repeated testing. However, these are not hard and fast parameters, as in they may not be the best parameters for all possible inputs, so the users can change them from within the program.
+
+
 ### References:
 https://medium.com/@myac.abhijit/facial-data-based-deep-learning-emotion-age-and-gender-prediction-47f2cc1edda7
 
