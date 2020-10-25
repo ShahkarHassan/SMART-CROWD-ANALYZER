@@ -1,5 +1,5 @@
 # SMART CROWD ANALYZER
-
+##MAJORITY OF DETAILS ARE IN ISSUES MADE.
 
 Smart Crowd Analyzer is a product which can enhance your Managing experience. Field of area we implied our product is Shopping Mall. Our Product can: 
 
